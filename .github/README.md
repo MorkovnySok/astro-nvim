@@ -66,7 +66,7 @@ AstroNvim is an aesthetic and feature-rich neovim config that is extensible and 
 
 ## ⚡ Requirements
 
-- [Nerd Fonts](https://www.nerdfonts.com/font-downloads) (_Optional with manual intervention:_ See [Documentation on customizing icons](https://docs.astronvim.com/Recipes/icons)) <sup>[[1]](#1)</sup>
+- [Nerd Fonts](https://www.nerdfonts.com/font-downloads) (_Optional with manual intervention:_ See [Documentation on customizing /clicons](https://docs.astronvim.com/Recipes/icons)) <sup>[[1]](#1)</sup>
 - [Neovim 0.8+ (_Not_ including nightly)](https://github.com/neovim/neovim/releases/tag/stable)
 - [Tree-sitter CLI](https://github.com/tree-sitter/tree-sitter/blob/master/cli/README.md) (_Note:_ This is only necessary if you want to use `auto_install` feature with Treesitter)
 - A clipboard tool is necessary for the integration with the system clipboard (see [`:help clipboard-tool`](https://neovim.io/doc/user/provider.html#clipboard-tool) for supported solutions)
@@ -97,7 +97,7 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 #### Clone the repository
 
 ```shell
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+git clone --depth 1 https://github.com/MorkovnySok/astro-nvim ~/.config/nvim
 nvim
 ```
 
@@ -113,7 +113,7 @@ Rename-Item -Path $env:LOCALAPPDATA\nvim-data -NewName $env:LOCALAPPDATA\nvim-da
 #### Clone the repository
 
 ```pwsh
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim $env:LOCALAPPDATA\nvim
+git clone --depth 1 https://github.com/MorkovnySok/astro-nvim $env:LOCALAPPDATA\nvim
 nvim
 ```
 
