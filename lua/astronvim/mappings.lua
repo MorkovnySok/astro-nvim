@@ -19,6 +19,10 @@ local sections = {
   t = { desc = get_icon("Terminal", 1, true) .. "Terminal" },
 }
 
+-- CUSTOM --
+maps.n["<C-u>"] = {"<C-u>zz"}
+maps.n["<C-d>"] = {"<C-d>zz"}
+
 -- Normal --
 -- Standard Operations
 maps.n["j"] = { "v:count == 0 ? 'gj' : 'j'", expr = true, desc = "Move cursor down" }
