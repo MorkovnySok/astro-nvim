@@ -44,10 +44,14 @@ return {
         "lua",
         "markdown",
         "markdown_inline",
-        "python",
         "query",
         "vim",
         "vimdoc",
+        "c_sharp",
+        "typescript",
+        "css",
+        "javascript",
+        "json"
       },
       highlight = {
         enable = true,
