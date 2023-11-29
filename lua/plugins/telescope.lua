@@ -12,7 +12,10 @@ return {
         git_worktrees = vim.g.git_worktrees,
         prompt_prefix = get_icon("Selected", 1),
         selection_caret = get_icon("Selected", 1),
-        path_display = { "truncate" },
+        path_display = function(opts, path)
+              local tail = require("telescope.utils").path_tail(path)
+              return string.format("%s (%s)", tail, path)
+            end,
         sorting_strategy = "ascending",
         layout_config = {
           horizontal = { prompt_position = "top", preview_width = 0.55 },
