@@ -22,6 +22,7 @@ local sections = {
 -- CUSTOM --
 maps.n["<C-u>"] = {"<C-u>zz"}
 maps.n["<C-d>"] = {"<C-d>zz"}
+maps.n["<leader>gg"] = {"<cmd>LazyGit<cr>"}
 
 -- Normal --
 -- Standard Operations
