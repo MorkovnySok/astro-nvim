@@ -1,3 +1,25 @@
+# Windows Installation 
+
+## Unmap powershell curl alias
+Add this line to powershell $profile (nvim $profile)
+``` powershell
+Remove-Item Alias:curl
+```
+
+## Intsall ripgrep for telescope 
+``` powershell
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.0.3/ripgrep-14.0.3-x86_64-pc-windows-msvc.zip
+Expand-Archive .\ripgrep-14.0.3-x86_64-pc-windows-msvc.zip -DestinationPath .\ripgrep
+```
+add it to path
+
+## Ignore ssl checks for curl
+Create .curlrc inside user folder with this line
+--ssl-no-revoke
+
+
+# Copied readme
+
 <div align="center" id="madewithlua">
     <img src="https://astronvim.com/logo/astronvim.svg" width="110", height="100">
 </div>
