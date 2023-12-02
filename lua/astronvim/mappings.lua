@@ -19,13 +19,6 @@ local sections = {
   t = { desc = get_icon("Terminal", 1, true) .. "Terminal" },
 }
 
--- CUSTOM --
-maps.n["<C-u>"] = { "<C-u>zz" }
-maps.n["<C-d>"] = { "<C-d>zz" }
-maps.n["<leader>gg"] = { "<cmd>LazyGit<cr>" }
-maps.n["<leader>pR"] = { "<cmd>lua require('astronvim.utils').reload()<cr>", desc = "Reload AstroNvim" }
-maps.n["gs"] = { "<cmd>lua SwitchBetweenHtmlAndTs()<cr>", desc = "Switch ts to html (and back)" }
-
 -- Normal --
 -- Standard Operations
 maps.n["j"] = { "v:count == 0 ? 'gj' : 'j'", expr = true, desc = "Move cursor down" }

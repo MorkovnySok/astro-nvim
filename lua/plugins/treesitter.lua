@@ -48,11 +48,6 @@ return {
         "query",
         "vim",
         "vimdoc",
-        "typescript",
-        "html",
-        "css",
-        "javascript",
-        "json",
       },
       highlight = {
         enable = true,
