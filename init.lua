@@ -1,6 +1,6 @@
 if vim.loader and vim.fn.has "nvim-0.9.1" == 1 then vim.loader.enable() end
 
-local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
+local vimrc = vim.fn.stdpath "config" .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
 for _, source in ipairs {
@@ -14,7 +14,7 @@ for _, source in ipairs {
   if not status_ok then vim.api.nvim_err_writeln("Failed to load " .. source .. "\n\n" .. fault) end
 end
 
-if not pcall(vim.cmd.colorscheme, "vscode") then
+if not pcall(vim.cmd.colorscheme, "catppuccin") then
   if astronvim.default_colorscheme then
     if not pcall(vim.cmd.colorscheme, astronvim.default_colorscheme) then
       require("astronvim.utils").notify(

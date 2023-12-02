@@ -13,12 +13,12 @@ return {
         prompt_prefix = get_icon("Selected", 1),
         selection_caret = get_icon("Selected", 1),
         path_display = function(opts, path)
-              local tail = require("telescope.utils").path_tail(path)
-              return string.format("%s   (%s)", tail, path)
-            end,
+          local tail = require("telescope.utils").path_tail(path)
+          return string.format("%s    (%s)", tail, path)
+        end,
         sorting_strategy = "ascending",
         layout_config = {
-          horizontal = { prompt_position = "top", preview_width = 0.45 },
+          horizontal = { prompt_position = "top", preview_width = 0.43 },
           vertical = { mirror = false },
           width = 0.95,
           height = 0.85,
