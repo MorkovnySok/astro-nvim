@@ -19,11 +19,6 @@ local sections = {
   t = { desc = get_icon("Terminal", 1, true) .. "Terminal" },
 }
 
--- CUSTOM --
-maps.n["<C-u>"] = {"<C-u>zz"}
-maps.n["<C-d>"] = {"<C-d>zz"}
-maps.n["<leader>gg"] = {"<cmd>LazyGit<cr>"}
-
 -- Normal --
 -- Standard Operations
 maps.n["j"] = { "v:count == 0 ? 'gj' : 'j'", expr = true, desc = "Move cursor down" }
@@ -280,6 +275,16 @@ if is_available "telescope.nvim" then
       end
     end,
     desc = "Find AstroNvim config files",
+  }
+  maps.n["<leader>fd"] = {
+    function()
+      require("telescope.builtin").find_files {
+        prompt_title = "Current Directory",
+        cwd = vim.fn.expand "%:p:h",
+        follow = true,
+      }
+    end,
+    desc = "Find files in current directory",
   }
   maps.n["<leader>fb"] = { function() require("telescope.builtin").buffers() end, desc = "Find buffers" }
   maps.n["<leader>fc"] = { function() require("telescope.builtin").grep_string() end, desc = "Find word under cursor" }
