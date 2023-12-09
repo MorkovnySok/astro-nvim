@@ -5,6 +5,10 @@ local astro_utils = require "astronvim.utils"
 
 return {
   n = {
+    -- LSP 
+    ["<leader>lo"] = { "<cmd>TypescriptRemoveUnused<cr>", desc = "Remove unused imports"},
+    ["<leader>lm"] = { "<cmd>lua require('typescript').actions.addMissingImports()<cr>", desc = "Add missing imports"},
+
     ["<C-u>"] = { "<C-u>zz" },
     ["<C-d>"] = { "<C-d>zz" },
     ["<leader>gg"] = { "<cmd>LazyGit<cr>" },
