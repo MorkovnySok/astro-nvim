@@ -9,7 +9,8 @@ return {
     ["<C-d>"] = { "<C-d>zz" },
     ["<leader>gg"] = { "<cmd>LazyGit<cr>" },
     ["<leader>pR"] = { "<cmd>lua require('astronvim.utils').reload()<cr>", desc = "Reload AstroNvim" },
-    ["gs"] = { "<cmd>lua SwitchBetweenHtmlAndTs()<cr>", desc = "Switch ts to html (and back)" },
+    ["gt"] = { "<cmd>lua SwitchBetweenHtmlAndTs()<cr>", desc = "Switch ts to html (and back)" },
+    ["gs"] = { "<cmd>lua SwitchCssAndHtml()<cr>", desc = "Switch css to html (and back)" },
 
     -- Buffer navigation
     ["]b"] = false,
@@ -41,9 +42,9 @@ return {
     -- harpoon
     ["<leader>a"] = { function() harpoon:list():append() end, desc = "Add to Harpoon list" },
     ["<C-e>"] = { function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "Harpoon quick menu" },
-    ["gh"] = { function() harpoon:list():select(1) end },
-    ["gj"] = { function() harpoon:list():select(2) end },
-    ["gk"] = { function() harpoon:list():select(3) end },
+    ["gh"] = { function() harpoon:list():select(1) end, desc = "Harpoon list 1" },
+    ["gj"] = { function() harpoon:list():select(2) end, desc = "Harpoon list 2" },
+    ["gk"] = { function() harpoon:list():select(3) end, desc = "Harpoon list 3" },
     -- ["<leader>l"] = { function() harpoon:list():select(4) end },
   },
   i = {

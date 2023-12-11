@@ -8,6 +8,7 @@ return {
       "css",
       "javascript",
       "json",
+      "c_sharp",
     },
   },
 }

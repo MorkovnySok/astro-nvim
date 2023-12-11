@@ -4,6 +4,7 @@ return {
   lsp = {
     timeout = 5000,
     formatting = {
+      timeout_ms = 5000,
       filter = function(client)
         if client.name == "null-ls" then return true end
         return false
