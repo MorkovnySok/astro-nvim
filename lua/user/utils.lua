@@ -3,7 +3,7 @@ function SwitchBetweenHtmlAndTs()
   local current_extension = vim.fn.expand "%:e"
 
   local target_extension = ""
-  if current_extension == "html" then
+  if current_extension == "html" or current_extension == "css" or current_extension == "scss" then
     target_extension = "ts"
   elseif current_extension == "ts" then
     target_extension = "html"
@@ -23,7 +23,7 @@ function SwitchCssAndHtml()
   local target_extension = ""
   if current_extension == "scss" then
     target_extension = "html"
-  elseif current_extension == "html" then
+  elseif current_extension == "html" or current_extension == "ts" then
     target_extension = "scss"
   else
     print "Unsupported file type"
