@@ -5,9 +5,9 @@ local astro_utils = require "astronvim.utils"
 
 return {
   n = {
-    -- LSP 
-    ["<leader>lo"] = { "<cmd>TypescriptRemoveUnused<cr>", desc = "Remove unused imports"},
-    ["<leader>lm"] = { "<cmd>lua require('typescript').actions.addMissingImports()<cr>", desc = "Add missing imports"},
+    -- LSP
+    ["<leader>lo"] = { "<cmd>TypescriptRemoveUnused<cr>", desc = "Remove unused imports" },
+    ["<leader>lm"] = { "<cmd>lua require('typescript').actions.addMissingImports()<cr>", desc = "Add missing imports" },
 
     ["<C-u>"] = { "<C-u>zz" },
     ["<C-d>"] = { "<C-d>zz" },
@@ -56,6 +56,7 @@ return {
     ["<C-k>"] = "<Up>",
     ["<C-h>"] = "<Left>",
     ["<C-l>"] = "<Right>",
+    ["<C-c>"] = "<Esc>",
   },
   v = {
     ["<leader>p"] = { '"_dP', desc = "Peserve register when pasting" },
