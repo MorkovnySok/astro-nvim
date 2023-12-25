@@ -49,13 +49,6 @@ return {
     opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "angularls") end,
   },
   {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    enabled = true,
-    event = "User AstroFile",
-    opts = { suggestion = { auto_trigger = true, debounce = 150 } },
-  },
-  {
     "matze/vim-move",
     event = "BufEnter",
   },
@@ -125,22 +118,4 @@ return {
     event = "VeryLazy",
     opts = {},
   },
-  -- {
-  --   "m4xshen/hardtime.nvim",
-  --   event = "User AstroFile",
-  --   opts = {
-  --     disabled_keys = {
-  --       ["<Insert>"] = { "", "i" },
-  --       ["<Home>"] = { "", "i" },
-  --       ["<End>"] = { "", "i" },
-  --       ["<PageUp>"] = { "", "i" },
-  --       ["<PageDown>"] = { "", "i" },
-  --     },
-  --     disable_mouse = false,
-  --   },
-  --   config = function(_, opts)
-  --     require("hardtime").setup(opts)
-  --     require("hardtime").enable()
-  --   end,
-  -- },
 }
