@@ -2,6 +2,7 @@ local utils = require "astronvim.utils"
 
 return {
   "AstroNvim/astrocommunity",
+  { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.colorscheme.vscode-nvim", enabled = true },
   {
     "catppuccin/nvim",
@@ -49,15 +50,25 @@ return {
     opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "angularls") end,
   },
   {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    enabled = true,
-    event = "User AstroFile",
-    opts = { suggestion = { auto_trigger = true, debounce = 150 } },
-  },
-  {
     "matze/vim-move",
     event = "BufEnter",
+  },
+  {
+    "Exafunction/codeium.vim",
+    event = "User AstroFile",
+    config = function()
+      vim.keymap.set("i", "<C-g>", function() return vim.fn["codeium#Accept"]() end, { expr = true })
+      vim.keymap.set("i", "<c-;>", function() return vim.fn["codeium#CycleCompletions"](1) end, { expr = true })
+      vim.keymap.set("i", "<c-,>", function() return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true })
+      vim.keymap.set("i", "<c-x>", function() return vim.fn["codeium#Clear"]() end, { expr = true })
+      vim.keymap.set("n", "<leader>;", function()
+        if vim.g.codeium_enabled == true then
+          vim.cmd "CodeiumDisable"
+        else
+          vim.cmd "CodeiumEnable"
+        end
+      end, { noremap = true, desc = "Toggle Codeium active" })
+    end,
   },
   {
     "hrsh7th/cmp-cmdline",
